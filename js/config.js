@@ -7,10 +7,11 @@
  */
 export const config = Object.freeze({
   appName: "Claude_PJT",
-  version: "0.1.0",
+  version: "0.2.0",
   repoUrl: "https://github.com/SES-git-hub/Claude_PJT",
   storageKeys: Object.freeze({
     theme: "cpjt:theme",
-    counter: "cpjt:counter",
+    calcAngle: "cpjt:calc:angle",
+    timer: "cpjt:timer",
   }),
 });

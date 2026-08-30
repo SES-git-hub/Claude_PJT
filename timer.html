@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="간단한 카운트다운 타이머" />
+  <meta name="color-scheme" content="light dark" />
+  <title>타이머 · Claude_PJT</title>
+
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <script>
+    try {
+      var t = JSON.parse(localStorage.getItem("cpjt:theme"));
+      if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="./">
+        <img class="brand__logo" src="./assets/favicon.svg" alt="" width="28" height="28" />
+        <span class="brand__name">Claude_PJT</span>
+      </a>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">테마</button>
+    </div>
+  </header>
+
+  <main class="container page">
+    <a class="back-link" href="./">← 홈으로</a>
+    <h1>타이머</h1>
+
+    <div class="timer" id="timer">
+      <div class="timer__display" id="timer-display" role="timer" aria-live="off">05:00</div>
+
+      <div class="timer__inputs">
+        <label>분 <input id="timer-min" type="number" min="0" max="999" value="5" inputmode="numeric" /></label>
+        <span aria-hidden="true">:</span>
+        <label>초 <input id="timer-sec" type="number" min="0" max="59" value="0" inputmode="numeric" /></label>
+      </div>
+
+      <div class="timer__presets" id="timer-presets">
+        <button class="btn" type="button" data-min="1">1분</button>
+        <button class="btn" type="button" data-min="3">3분</button>
+        <button class="btn" type="button" data-min="5">5분</button>
+        <button class="btn" type="button" data-min="10">10분</button>
+      </div>
+
+      <div class="timer__controls">
+        <button class="btn btn--primary" id="timer-toggle" type="button">시작</button>
+        <button class="btn" id="timer-reset" type="button">초기화</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> Claude_PJT · MIT License</p>
+    </div>
+  </footer>
+
+  <script type="module" src="./js/timer.js"></script>
+</body>
+</html>

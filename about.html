@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Eunsub Shim 소개" />
+  <meta name="color-scheme" content="light dark" />
+  <title>소개 · Claude_PJT</title>
+
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <script>
+    try {
+      var t = JSON.parse(localStorage.getItem("cpjt:theme"));
+      if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="./">
+        <img class="brand__logo" src="./assets/favicon.svg" alt="" width="28" height="28" />
+        <span class="brand__name">Claude_PJT</span>
+      </a>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">테마</button>
+    </div>
+  </header>
+
+  <main class="container page">
+    <a class="back-link" href="./">← 홈으로</a>
+
+    <!-- 소개 문구는 이 파일에서 자유롭게 수정하세요. -->
+    <div class="about">
+      <div class="about__avatar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="8" r="3.5" />
+          <path d="M5 20c1.5-3.5 4-5 7-5s5.5 1.5 7 5" />
+        </svg>
+      </div>
+
+      <h1>Eunsub Shim</h1>
+
+      <p>안녕하세요. 필요할 때 쓰려고 작은 웹 도구를 하나씩 만들어 두는 걸 좋아합니다.</p>
+      <p>
+        이 사이트는 빌드 도구 없이 순수 HTML / CSS / JavaScript로만 만든
+        정적 페이지이고, <code>main</code> 브랜치에서 그대로 GitHub Pages로 배포됩니다.
+        쓸모 있는 게 생각나면 홈 화면에 카드가 하나씩 늘어납니다.
+      </p>
+
+      <ul class="about__chips">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>GitHub Pages</li>
+        <li>정적 사이트</li>
+      </ul>
+
+      <p>
+        <a class="btn" href="https://github.com/SES-git-hub" target="_blank" rel="noopener">GitHub 프로필 열기</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> Claude_PJT · MIT License</p>
+    </div>
+  </footer>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
